@@ -1,6 +1,6 @@
 def app(env, start_response):
     """Simplest possible application object"""
-    data = b'Hello, World!\nTest'
+    data = b'Hello, World!\n' + env['test_environment_var']
     status = '200 OK'
     response_headers = [
         ('Content-type', 'text/plain'),
